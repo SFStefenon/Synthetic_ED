@@ -11,4 +11,12 @@ The generated objects using generative AI are based on the annotations of relay-
 The objects are used considering probabilities of their appearance based on the model's performance using original data. This approach aims to improve the model's ability to identify rare objects, considering that using unbalanced data is one of the major challenges in applying deep learning models.
 
 
+```    
+inputdata/synthetic_GAN/0 ... 133
+inputdata/synthetic_cGAN/0 ... 133
+inputdata/synthetic_diffusion/0 ... 133
+inputdata/synthetic_cdiffusion/0 ... 133
+```
+
+
 ![image](https://github.com/SFStefenon/synthetic_ED/assets/88292916/1f6741c8-7800-454d-b95f-a80d514180a4)
