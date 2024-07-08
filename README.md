@@ -8,7 +8,7 @@ The generated objects using generative AI are based on the annotations of relay-
 [diffusion](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/difussion.ipynb), or 
 [c_diffusion](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/c_difussion.ipynb). Obs: to compute the standard diffusion is necessary to define the path.
 
-The output data from the generative AI models is organized as follows:
+Considering the PyTorch framework, the saved files are converted to be used to create the synthetic EDs. The synthetic data from the generative AI models is organized as follows:
 ```
 inputdata/original/0 ... 133
 inputdata/synthetic_GAN/0 ... 133
