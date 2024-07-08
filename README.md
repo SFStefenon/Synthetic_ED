@@ -8,7 +8,9 @@ The generated objects using generative AI are based on the annotations of relay-
 [diffusion](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/difussion.ipynb), or 
 [c_diffusion](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/c_difussion.ipynb). Obs: to compute the standard diffusion is necessary to define the path.
 
-Considering the PyTorch framework, the saved files are converted to be used to create the synthetic EDs. The organization of the original annotations as well as those generated synthetically are saved according to their class. Annotations have a total of 133 classes, including labels (upper and lower case letters), specifiers [arrows down or up], and symbols. There are 57 variations of symbols, which are divided into subclasses: relays (18 types), contacts (17 types), electromagnets (5 types), electrics (13 types), and others (4 types). The labels are sequences of numbers or letters [0 to 9, a to z, and A to Z]. The synthetic data from the generative AI models is organized as follows:
+Considering the PyTorch framework, the saved files are converted to be used to create the synthetic EDs. The organization of the original annotations as well as those generated synthetically are saved according to their class. There are labels (upper and lower case letters), specifiers [arrows down or up], and symbols. 
+
+There are 57 variations of symbols, which are divided into subclasses: relays (18 types), contacts (17 types), electromagnets (5 types), electrics (13 types), and others (4 types). The labels are sequences of numbers or letters [0 to 9, a to z, and A to Z]. The synthetic data from the generative AI models is organized as follows:
 ```
 inputdata/original/0 ... 133
 inputdata/synthetic_GAN/0 ... 133
