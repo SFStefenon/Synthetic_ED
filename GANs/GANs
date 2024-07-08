@@ -18,6 +18,7 @@ print('device:', device)
 # Define the storage and dataset path
 storage = './Results_GANs/'
 train_data_path = '../Data/28by28_rfi_train_perfect.csv'
+save_by_epoch = False
 
 @dataclass
 class Hyperparameter:
@@ -33,7 +34,6 @@ class Hyperparameter:
     gp_lambda: float        = 10.
 hp = Hyperparameter()
 img_size = 28
-size = '28by28'
 
 start = time.time()
 for classes in range(0,133):
@@ -175,7 +175,21 @@ for classes in range(0,133):
                 generator_losses_ep.append(generator_loss.item())
                 critic_losses_ep.append(critic_loss.item())
 
-            if (batch_idx == len(dataloader) - 1) and (((epoch % 1000) == 0) or (epoch == (hp.num_epochs-1))):
+            if save_by_epoch == True:
+                if (batch_idx == len(dataloader) - 1) and ((epoch % 1000) == 0):
+                    with torch.no_grad(): fake_images = generator(fixed_noise).cpu()
+                    plot_fake_img = vutils.make_grid(fake_images, padding=2, normalize=True)
+                    for images in plot_fake_img:
+                        fig, ax = plt.subplots(figsize=(18,10))
+                        ax.set_xticks([])
+                        ax.set_yticks([])
+                        ax.imshow(make_grid(images, nrow=8).permute(2,1,0))
+                        plt.savefig(str(storage) + 'R_GAN_class_' + str(classes) + '_ep_' + str(epoch) + '_image_fake.pdf')
+                        break
+                    tensor_name = str(storage) + 'R_GAN_class_' + str(classes) + '_ep_' + str(epoch) + '_fake_images.pt'
+                    torch.save(fake_images, tensor_name)
+                    
+            if (batch_idx == len(dataloader) - 1) and (epoch == (hp.num_epochs-1)):
                 with torch.no_grad(): fake_images = generator(fixed_noise).cpu()
                 plot_fake_img = vutils.make_grid(fake_images, padding=2, normalize=True)
                 for images in plot_fake_img:
@@ -183,11 +197,21 @@ for classes in range(0,133):
                     ax.set_xticks([])
                     ax.set_yticks([])
                     ax.imshow(make_grid(images, nrow=8).permute(2,1,0))
-                    plt.savefig(str(storage) + 'R_GAN_class_' + str(classes) + '_ep_' + str(epoch) + '.pdf')
+                    plt.savefig(str(storage) + 'R_GAN_class_' + str(classes) + '_image_fake.pdf')
                     break
-
-                tensor_name = str(storage) + 'R_GAN_class_' + str(classes) + '_ep_' + str(epoch) + '_fake_images.pt'
+                tensor_name = str(storage) + 'R_GAN_class_' + str(classes) + '_fake_images.pt'
                 torch.save(fake_images, tensor_name)
+                fig, (ax1) = plt.subplots(1, 1, figsize=(8, 4))
+                ax1.plot(generator_losses_ep,'k', zorder=2, label='Generator')
+                ax1.set_ylabel('Loss')
+                ax1.set_xlabel('Epochs')
+                ax1.plot(critic_losses_ep, 'r', zorder=2, label='Discriminator')
+                ax1.grid(linestyle = '--', linewidth = 0.5, zorder=0)
+                ax1.legend()
+                plt.show
+                plt.savefig(str(storage) + 'R_GAN_class_' + str(classes) + '_loss.pdf')
+                
+                
 
             # Check how the generator is doing by saving G's output on fixed_noise (save by epoch)
             if (iters % 100 == 0) or ((epoch == hp.num_epochs - 1) and (batch_idx == len(dataloader) - 1)):
