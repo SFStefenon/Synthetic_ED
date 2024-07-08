@@ -11,19 +11,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import time
-
 from torch.utils.data import Dataset
 import pandas as pd
 from PIL import Image
 from torchvision.utils import make_grid
-
 torch.set_num_threads(1)
 torch.manual_seed(1)
-
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print('device:', device)
 
-storage = '/storage/DSIP/gnn_ruled/GAN/no_110b/'
+# Define the storage path
+storage = ''
 
 @dataclass
 class Hyperparameter:
