@@ -4,7 +4,7 @@ This repository presents a rule and statistical-based model for creating synthet
 
 The generated objects using generative AI are based on the annotations of relay-based railway interlocking systems (RRIS) EDs from the rail network. Regarding the annotations, symbols, labels, specifiers, and electrical connections are taken into account.
 
-
+The objects are used considering probabilities of their appearance based on the model's performance using original data. This approach aims to improve the model's ability to identify rare objects, considering that the use of unbalanced data is one of the major challenges in applying deep learning models.
 
 
 ![image](https://github.com/SFStefenon/synthetic_ED/assets/88292916/1f6741c8-7800-454d-b95f-a80d514180a4)
