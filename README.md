@@ -1,8 +1,9 @@
 # synthetic_ED
 
-This repository presents a rule and statistical-based model for creating synthetic engineering drawings. The application of the proposed method is based on the generation of synthetic objects using generative artificial intelligence models. In particular, generative adversarial networks (GANs), conditional GANs (cGANs), diffusion models, and conditional diffusion models are considered.
+This repository presents a rule and statistical-based model for creating synthetic engineering drawings (EDs). The application of the proposed method is based on the generation of synthetic objects using generative artificial intelligence (GAI) models. In particular, generative adversarial networks (GANs), conditional GANs (cGANs), diffusion models, and conditional diffusion models are considered.
 
-a
+The generated objects are based on the annotations of relay-based railway interlocking systems (RRIS) EDs from the rail network. Regarding the annotations, symbols, labels, specifiers and electrical connections are taken into account.
+
 
 
 
