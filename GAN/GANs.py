@@ -44,7 +44,7 @@ train_data_path = '28by28_rfi_train_perfect.csv'
 size = '28by28'
 
 start = time.time()
-for classes in range(50,70):
+for classes in range(0,133):
   print(classes)
   if any(pd.read_csv(train_data_path).label.values==int(classes)): # Check if the class exists
     considered_label = int(classes)
@@ -55,11 +55,9 @@ for classes in range(50,70):
         def __init__(self, path, img_size, c_label=considered_label, transform=None):
             self.transform = transform
             rfi_df = pd.read_csv(path)
-            ########################################################################
             images = rfi_df.iloc[:, 1:].values.astype('uint8').reshape(-1, img_size, img_size)
             self.images = images[np.where(rfi_df.label.values==c_label)]
             self.labels = rfi_df.label.values[np.where(rfi_df.label.values==c_label)]
-            ########################################################################
             print('Image size:', self.images.shape)
             print('--- Label ---')
             print(rfi_df.label.value_counts())
@@ -137,7 +135,7 @@ for classes in range(50,70):
     fixed_noise = torch.randn((hp.samples_for_class*hp.num_classes, hp.latent_size), device=device)
     grad_tensor = torch.ones((hp.batchsize, 1), device=device)
 
-    start_time = time.time()
+    start_model = time.time()
     for epoch in range(hp.num_epochs):
         for batch_idx, data in enumerate(dataloader, 0):
             real_images = data[0].to(device)
@@ -173,7 +171,7 @@ for classes in range(50,70):
 
             # Output training stats
             if batch_idx % 1000 == 0:
-                elapsed_time = time.time() - start_time
+                elapsed_time = time.time() - start_model
                 print(f"[{epoch:>2}/{hp.num_epochs}][{iters:>7}][{elapsed_time:8.2f}s]\t"
                     f"d_loss/g_loss: {critic_loss.item():4.2}/{generator_loss.item():4.2}\t")
 
@@ -181,7 +179,6 @@ for classes in range(50,70):
             generator_losses.append(generator_loss.item())
             critic_losses.append(critic_loss.item())
 
-            #########################################################################################################
             if (batch_idx == len(dataloader) - 1):
                 generator_losses_ep.append(generator_loss.item())
                 critic_losses_ep.append(critic_loss.item())
@@ -199,7 +196,6 @@ for classes in range(50,70):
 
                 tensor_name = str(storage) + 'R_GAN_class_' + str(classes) + 'ep' + str(epoch) + '_fake_images.pt'
                 torch.save(fake_images, tensor_name)
-            ########################################################################################################
 
             # Check how the generator is doing by saving G's output on fixed_noise (save by epoch)
             if (iters % 100 == 0) or ((epoch == hp.num_epochs - 1) and (batch_idx == len(dataloader) - 1)):
@@ -207,28 +203,13 @@ for classes in range(50,70):
                 # img_list.append(vutils.make_grid(fake_images, padding=2, normalize=True))
             iters += 1
 
-    # tensor_name = str(storage) + 'Results_GAN_class_' + str(classes) + '_all_images.pt'
-    # torch.save(img_list, tensor_name)
-    # tensor_name = str(storage) + 'Results_GAN_class_' + str(classes) + '_fake_images_'+size+'.pt'
-    # torch.save(fake_images, tensor_name)
     tensor_name = str(storage) + 'R_GAN_class_' + str(classes) + '_generator_losses_ep.pt'
     torch.save(generator_losses_ep, tensor_name)
     tensor_name = str(storage) + 'R_GAN_class_' + str(classes) + '_critic_losses_ep.pt'
     torch.save(critic_losses_ep, tensor_name)
 
-    '''fig, (ax1) = plt.subplots(1, 1, figsize=(8, 4))
-    plot_fake_img = vutils.make_grid(fake_images, padding=2, normalize=True)
-    for images in plot_fake_img:
-        fig, ax = plt.subplots(figsize=(18,10))
-        ax.set_xticks([])
-        ax.set_yticks([])
-        ax.imshow(make_grid(images, nrow=8).permute(2,1,0))
-        figure_name = str(storage) + 'Results_GAN_class_' + str(classes) + '_image_generated_'+size+'.pdf'
-        plt.savefig(figure_name)
-        break'''
-
     end = time.time()
-    time_s = end - start
+    time_s = end - start_model
     fig, (ax1) = plt.subplots(1, 1, figsize=(8, 4))
     ax1.plot(generator_losses_ep,'k', zorder=2, label='Generator')
     ax1.title.set_text(f'{time_s:.2f}s')
