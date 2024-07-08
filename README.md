@@ -3,8 +3,8 @@
 This repository presents a rule and statistical-based model for creating synthetic engineering drawings (EDs). The application of the proposed method is based on the generation of synthetic objects using generative artificial intelligence (AI) models. In particular, generative adversarial networks (GANs), conditional GANs (cGANs), diffusion, and conditional diffusion (c_diffusion) models are considered.
 
 The generated objects using generative AI are based on the annotations of relay-based railway interlocking systems (RRIS) EDs from the rail network. Regarding the annotations, symbols, labels, specifiers, and electrical connections are considered. The algorithms to generate the 28-pixel objects are available at:
-[GANs](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/GANs.ipynb), 
-[cGANs](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/cGANs.ipynb), 
+[GANs](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/gans.ipynb), 
+[cGANs](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/cgans.ipynb), 
 [diffusion](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/difussion.ipynb), or 
 [c_diffusion](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/c_difussion.ipynb).
 
