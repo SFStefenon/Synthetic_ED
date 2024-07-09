@@ -10,11 +10,11 @@ The generated objects using generative AI are based on the annotations of relay-
 
 Considering the PyTorch framework, the saved files are converted to be used to create the synthetic EDs. The organization of the original annotations as well as those generated synthetically are saved according to their class. There are labels (upper and lower case letters), specifiers [arrows down or up], and symbols [57 variations]. The synthetic data from the generative AI models is organized as follows:
 ```
-inputdata/original/0 ... 133
-inputdata/synthetic_GAN/0 ... 133
-inputdata/synthetic_cGAN/0 ... 133
-inputdata/synthetic_diffusion/0 ... 133
-inputdata/synthetic_cdiffusion/0 ... 133
+inputdata/original/0 ... 132
+inputdata/synthetic_GAN/0 ... 132
+inputdata/synthetic_cGAN/0 ... 132
+inputdata/synthetic_diffusion/0 ... 132
+inputdata/synthetic_cdiffusion/0 ... 132
 ```
 
 The objects are used considering probabilities of their appearance based on the model's performance using original data. This approach aims to improve the model's ability to identify rare objects, considering that using unbalanced data is one of the major challenges in applying deep learning models.
