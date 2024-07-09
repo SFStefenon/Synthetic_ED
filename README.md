@@ -22,3 +22,5 @@ The objects are used considering probabilities of their appearance based on the 
 
 
 ![image](https://github.com/SFStefenon/synthetic_ED/assets/88292916/1f6741c8-7800-454d-b95f-a80d514180a4)
+
+If you need to use images larger than 640 pixels, you will need to convert the coordinates to you only look once (YOLO) model. Algorithm 4 converts the coordinates to the model and saves the names as needed to load this data. Algorithm 5 crops 640 pixels and saves them to be used directly in conjunction with the annotations.
