@@ -16,6 +16,8 @@ inputdata/synthetic_cGAN/0 ... 132
 inputdata/synthetic_diffusion/0 ... 132
 inputdata/synthetic_cdiffusion/0 ... 132
 ```
+The saved torch files are converted by [algorithm 1]() and [algorithm 2]() to be saved using this structure.
+
 
 The objects are used considering probabilities of their appearance based on the model's performance using original data. This approach aims to improve the model's ability to identify rare objects, considering that using unbalanced data is one of the major challenges in applying deep learning models.
 
