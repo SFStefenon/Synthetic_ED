@@ -16,7 +16,7 @@ The generated objects using generative AI are based on the annotations of relay-
 
 ---
 
-# Synthetic Drawings considering a Probabilistic Ruled-based Model
+## Synthetic Drawings considering a Probabilistic Ruled-based Model
 
 Considering the PyTorch framework, the saved files are converted to be used to create the synthetic EDs. The organization of the original annotations as well as those generated synthetically are saved according to their class. There are labels (upper and lower case letters), specifiers [arrows down or up], and symbols [57 variations]. The saved torch files are converted to JPG files by [Algorithm 2](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/c_gan_convert_to_jpg.ipynb) (for GANs) and [Algorithm 3](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/c_diffusion_convert_to_jpg.ipynb) for (for diffusion models). The synthetic data from the generative AI models is organized as follows:
 ```
