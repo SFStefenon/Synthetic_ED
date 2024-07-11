@@ -29,7 +29,7 @@ inputdata/synthetic_cdiffusion/0 ... 132
 
 The objects are used considering probabilities of their appearance based on the model's performance using original data. This approach aims to improve the model's ability to identify rare objects, considering that using unbalanced data is one of the major challenges in applying deep learning models. The rule and statistical-based model to create the synthetic EDs is the [Algorithm 4](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/synthetic_EDs.ipynb), and the flowchart is as follows:
 
-![image](https://github.com/SFStefenon/synthetic_ED/assets/88292916/1f6741c8-7800-454d-b95f-a80d514180a4)
+![image](https://github.com/SFStefenon/synthetic_ED/assets/88292916/0c34ae4a-ad84-4199-a398-8916718ac2b7)
 
 If you need to use synthetic EDs larger than 640 pixels, you will need to convert the coordinates to you only look once (YOLO) coordinate system. [Algorithm 5](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/save_640_640_BBs_for_YOLO.ipynb) converts the coordinates of the bounding boxes to YOLO coordinate system and saves the names as needed to load this data. [Algorithm 6](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/save_640_640_slide_window_for_YOLO.ipynb) crops 640 pixels and saves them to be used directly in conjunction with the annotations.
 
