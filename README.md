@@ -4,7 +4,7 @@ This repository presents a probabilistic ruled-based model for creating syntheti
 
 ---
 
-## Synthetic Objects using Generative AI
+## Synthetic Objects Using Generative AI
 
 The application of the proposed method is based on the generation of synthetic objects using generative artificial intelligence (AI) models. In particular, generative adversarial networks (GANs), conditional GANs (cGANs), diffusion, and conditional diffusion (c_diffusion) models are considered. The original annotations are converted to a CSV file to automate their loading to generative AI models (using this [Algorithm 1](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/save_CSV_file_from_images_annotated.ipynb)).
 
@@ -16,7 +16,7 @@ The generated objects using generative AI are based on the annotations of relay-
 
 ---
 
-## Synthetic Drawings considering a Probabilistic Ruled-based Model
+## Synthetic Drawings Considering a Probabilistic Ruled-based Model
 
 Considering the PyTorch framework, the saved files are converted to be used to create the synthetic EDs. The organization of the original annotations as well as those generated synthetically are saved according to their class. There are labels (upper and lower case letters), specifiers [arrows down or up], and symbols [57 variations]. The saved torch files are converted to JPG files by [Algorithm 2](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/c_gan_convert_to_jpg.ipynb) (for GANs) and [Algorithm 3](https://colab.research.google.com/github/SFStefenon/synthetic_ED/blob/main/c_diffusion_convert_to_jpg.ipynb) for (for diffusion models). The synthetic data from the generative AI models is organized as follows:
 ```
@@ -53,4 +53,4 @@ Thank you.
 
 Dr. **Stefano Frizzo Stefenon**.
 
-Trento, Italy, July 10, 2024.
+Trento, Italy, July 11, 2024.
