@@ -37,9 +37,12 @@ If you need to use synthetic EDs larger than 640 pixels, you will need to conver
 
 ## Annotations and Object Detection Method
 
-To create a custom dataset of RRIS an image labeling software was used. For this project, the [labelImg](https://github.com/heartexlabs/labelImg) based on Python was considered.
-
 The object detection was performed by the YOLOv8, to compute the experiments we followed the official developer [Ultralytics](https://github.com/ultralytics/ultralytics).
+
+To create a custom dataset of RRIS an image labeling software was used. For this project, the [labelImg](https://github.com/heartexlabs/labelImg) based on Python was considered. An example of the annotations is presented as follows:
+
+![image](https://github.com/SFStefenon/synthetic_ED/assets/88292916/04a4667f-70ec-45b0-bb2b-7ab57798b3b4)
+
 
 ---
 
