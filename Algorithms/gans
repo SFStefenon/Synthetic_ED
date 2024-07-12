@@ -17,7 +17,7 @@ print('device:', device)
 
 # Define the storage and dataset path
 storage = './saved_results/'
-train_data_path = '28by28_rfi_train_perfect.csv'
+train_data_path = '28by28_rfi_train_perfect_labels_1.csv'
 save_by_epoch = False
 
 @dataclass
@@ -36,7 +36,7 @@ hp = Hyperparameter()
 img_size = 28
 
 start = time.time()
-for classes in range(18,19):
+for classes in range(0,133):
   print(classes)
   if any(pd.read_csv(train_data_path).label.values==int(classes)): # Check if the class exists
     considered_label = int(classes)
