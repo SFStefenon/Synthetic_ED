@@ -1,3 +1,8 @@
+'''
+Algorithm wrote by Stefano Frizzo Stefenon
+Fondazione Bruno Kessler
+Trento, Italy, June 06, 2024.
+'''
 import torch
 from PIL import Image
 from skimage import color
