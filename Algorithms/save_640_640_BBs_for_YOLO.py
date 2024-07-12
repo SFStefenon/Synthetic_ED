@@ -1,3 +1,8 @@
+'''
+Algorithm wrote by Stefano Frizzo Stefenon
+Fondazione Bruno Kessler
+Trento, Italy, June 06, 2024.
+'''
 import glob
 
 main = str('./Synthetic/Final')
