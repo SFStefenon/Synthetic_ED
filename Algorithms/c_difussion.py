@@ -16,7 +16,7 @@ print('device:', device)
 
 # Define the storage and dataset path
 save_dir = './saved_results/'
-train_data_path = '28by28_rfi_train_perfect_labels_0.csv'
+train_data_path = '28by28_rfi_train_perfect_labels_1.csv'
 
 n_epoch = 10 # 5000
 samples = 10
