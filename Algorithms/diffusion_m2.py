@@ -35,7 +35,7 @@ storage = './saved_results/'
 
 img_size = 32
 batchsize = 16
-train_data_path = '32by32_rfi_train_perfect.csv'
+train_data_path = '32by32_rfi_train_perfect_labels_1.csv'
 size = '32by32'
 
 for classes in range(0,133):
