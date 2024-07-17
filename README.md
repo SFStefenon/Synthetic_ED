@@ -11,7 +11,7 @@ The application of the proposed method is based on the generation of synthetic o
 The generated objects using generative AI are based on the annotations of relay-based railway interlocking systems (RRIS) EDs from the rail network. Regarding the annotations, symbols, labels, specifiers, and electrical connections are considered. The algorithms to generate the 28-pixel objects are available at:
 [GANs](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/gans.ipynb), 
 [cGANs](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_gans.ipynb), 
-[diffusion](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/difussion.ipynb), or 
+[diffusion](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/diffusion_m2.ipynb), or 
 [c_diffusion](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_difussion.ipynb). Obs: to compute the standard diffusion is necessary to define the path.
 
 ---
