@@ -12,7 +12,7 @@ The generated objects using generative AI are based on the annotations of relay-
 [GANs](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/gans.ipynb), 
 [cGANs](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_gans.ipynb), 
 [diffusion](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/diffusion_m2.ipynb), or 
-[c_diffusion](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_difussion.ipynb). Obs: to compute the standard diffusion is necessary to define the path.
+[c_diffusion](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_difussion.ipynb). Obs: To compute these models is necessary to define the storage path.
 
 ---
 
