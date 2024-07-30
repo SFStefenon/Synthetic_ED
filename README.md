@@ -18,7 +18,7 @@ The generated objects using generative AI are based on the annotations of relay-
 
 ## Synthetic Drawings Considering a Probabilistic Ruled-based Model
 
-Considering the PyTorch framework, the saved files are converted to be used to create the synthetic EDs. The organization of the original annotations as well as those generated synthetically are saved according to their class. There are labels (upper and lower case letters), specifiers [arrows down or up], and symbols [57 variations]. The saved torch files are converted to JPG files by [Algorithm 2](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_gan_convert_to_jpg.ipynb) (for GANs) and [Algorithm 3](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_diffusion_convert_to_jpg.ipynb) for (for diffusion models). The synthetic data from the generative AI models is organized as follows:
+Considering the PyTorch framework, the saved files are converted to be used to create the synthetic EDs. The organization of the original annotations as well as those generated synthetically are saved according to their class. There are labels (numbers, upper and lower case letters), specifiers [arrows down or up], and symbols [57 variations]. The saved torch files are converted to JPG files by [Algorithm 2](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_gan_convert_to_jpg.ipynb) (for GANs) and [Algorithm 3](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_diffusion_convert_to_jpg.ipynb) for (for diffusion models). The synthetic data from the generative AI models is organized as follows:
 ```
 inputdata/original/0 ... 132
 inputdata/synthetic_GAN/0 ... 132
