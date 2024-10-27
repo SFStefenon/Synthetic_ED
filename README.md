@@ -50,6 +50,4 @@ To create a custom dataset of RRIS an image labeling software was used. For this
 
 Thank you.
 
-Dr. **Stefano Frizzo Stefenon**.
-
 Trento, Italy, October 16, 2024.
