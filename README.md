@@ -48,6 +48,10 @@ To create a custom dataset of RRIS an image labeling software was used. For this
 
 **Algorithms [1](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/save_CSV_file_from_images_annotated.ipynb), [2](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_gan_convert_to_jpg.ipynb), [3](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/c_diffusion_convert_to_jpg.ipynb), [4](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/synthetic_EDs.ipynb), [5](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/save_640_640_BBs_for_YOLO.ipynb), and [6](https://github.com/SFStefenon/synthetic_ED/blob/main/Colabs/save_640_640_slide_window_for_YOLO.ipynb) were written from scratch by the author**, the generative AI models were modified from online available models.
 
-Thank you.
+---
 
-Trento, Italy, October 16, 2024.
+Wrote by Dr. Stefano Frizzo Stefenon
+
+Fondazione Bruno Kessler
+
+Trento, Italy, 2025
