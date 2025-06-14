@@ -50,7 +50,7 @@ To create a custom dataset of RRIS an image labeling software was used. For this
 
 ---
 
-Wrote by Dr. Stefano Frizzo Stefenon
+Wrote by Dr. **Stefano Frizzo Stefenon**
 
 Fondazione Bruno Kessler
 
